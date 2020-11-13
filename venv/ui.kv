@@ -1,0 +1,97 @@
+<MainWindow>:
+    BoxLayout:
+        Screen:
+
+            NavigationLayout:
+
+                ScreenManager:
+
+                    Screen:                 ###### main screen on this window
+
+                        BoxLayout:
+                            orientation: 'vertical'
+
+                            MDToolbar:
+                                title: "Big Data App"
+                                elevation: 10
+                                left_action_items: [['menu', lambda x: nav_drawer.set_state()]]
+                                right_action_items: [["alert-decagram", lambda x: app.show_alert_dialog()]]
+                            BoxLayout:
+                                size_hint:(1,0.3)
+                            BoxLayout:
+                                BoxLayout:
+                                BoxLayout:
+
+                                    MDCard:
+                                        orientation: "vertical"
+                                        focus_behavior: True
+
+                                        BoxLayout:
+                                            ImageButton:
+                                                source:"resources/icons/engine_on.png"
+
+
+                                BoxLayout:
+                            BoxLayout:
+                                size_hint:(1,0.3)
+
+
+
+
+
+
+                MDNavigationDrawer:
+
+                    id: nav_drawer
+                    type: "standard"
+                    ContentNavigationDrawer:
+                        BoxLayout:
+                            orientation:"vertical"
+                            BoxLayout:
+                                orientation:"vertical"
+                                MDToolbar:
+                                    title: "                    Options"
+
+                                    elevation: 10
+                                Widget:
+                            BoxLayout:
+                                orientation:"vertical"
+                                MDCard:
+                                    elevation:0
+                                    focus_behavior: True
+                                    MDFlatButton:
+                                        size_hint:(1,1)
+                                        text: "[color=#fa5b3d]help[/color]"
+                                        markup:True
+                                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                                MDCard:
+                                    elevation:0
+                                    focus_behavior: True
+                                    MDFlatButton:
+                                        size_hint:(1,1)
+                                        text: "[color=#fa5b3d]settings[/color]"
+                                        markup:True
+                                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                                MDCard:
+                                    elevation:0
+                                    focus_behavior: True
+                                    MDFlatButton:
+                                        size_hint:(1,1)
+                                        text: "[color=#fa5b3d]team[/color]"
+                                        markup:True
+                                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+
+
+                            BoxLayout:
+                                BoxLayout:
+                                BoxLayout:
+                                    MDChip:
+                                        label: 'v1.0'
+                                        pos_hint: {"center_x": .5, "center_y": .5}
+
+                                        icon:"sticker-check"
+                                BoxLayout:
